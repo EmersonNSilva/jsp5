@@ -2,8 +2,8 @@ let xBolinha = 300
 let yBolinha = 200
 let dBolinha = 40
 
-let xvBolinha = 2
-let yvBolinha = 2
+let vxBolinha = 2
+let vyBolinha = 2
 
 
 function setup() {
@@ -18,4 +18,8 @@ function draw() {
 function bolinha(){
   circle(xBolinha, yBolinha,dBolinha)
   
+  xBolinha = xBolinha + vxBolinha 
+  
+  if(xBolinha > 600 || xBolinha < 0)
+  vxBolinha = vxBolinha * -1
 }
